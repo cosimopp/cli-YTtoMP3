@@ -10,8 +10,8 @@ from os import remove
 #toDo check whether user is connected
 
 
-#url = argv[1]
-url = input("url video YT, then press ENTER: ")
+url = argv[1]
+#url = input("url video YT, then press ENTER: ")
 ytvideo = YouTube(url) #ytvideo.title, thumbnail_url
 abr = ytvideo.streams.filter(only_audio=True) #list with all audio bit rates
 maxi = float("-inf")
@@ -28,4 +28,4 @@ if ext != ".mp3":
 	AudioSegment.from_file(downloaded).export(name + ".mp3", format="mp3", bitrate="320k")
 	remove(downloaded)
 print("success!")
-input()
+#input()
