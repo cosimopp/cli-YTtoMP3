@@ -32,3 +32,4 @@ if "playlist" in url:
 	playlist = Playlist(url)
 	for yturl in playlist.video_urls: DownloadSong(yturl)
 	print(f"all {len(playlist.video_urls)} songs successfully downloaded!\n")
+else: DownloadSong(url)
