@@ -33,7 +33,7 @@ if len(argv) > 2:
 else:
 	path = getcwd() # current path
 if "playlist" in url:
-	playlist = Playlist(url, path)
+	playlist = Playlist(url) #lista degli url dei video nella playlist
 	for yturl in playlist.video_urls: DownloadSong(yturl, path)
 	print(f"all {len(playlist.video_urls)} songs successfully downloaded!\n")
 else: DownloadSong(url, path)
