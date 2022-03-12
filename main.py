@@ -11,7 +11,7 @@ from os import remove, getcwd
 #toDo check whether user is connected
 def DownloadSong(url, path):
 	ytvideo = YouTube(url) #ytvideo.title, thumbnail_url
-	abr = ytvideo.streams.filter(only_audio=True) #list of same song with all different audio bit rates
+	abr = ytvideo.streams.filter(only_audio=True) #list of all audio bit rates of the same song
 	maxi = float("-inf")
 	for i in range(len(abr)):
 		rate = float(getattr(abr[i], "abr")[:-4])
