@@ -29,7 +29,7 @@ def DownloadSong(url):
 
 url = argv[1]
 if "playlist" in url:
-	playlist = Playlist(url)
+	playlist = Playlist(url) #https://github.com/pytube/pytube/issues/848
 	for yturl in playlist.video_urls: DownloadSong(yturl)
 	print(f"all {len(playlist.video_urls)} songs successfully downloaded!\n")
 else: DownloadSong(url)
